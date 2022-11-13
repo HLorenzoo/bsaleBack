@@ -12,6 +12,13 @@ class ProductController {
     if (error) return res.status(400).json({ data });
     res.status(200).json({ data });
   }
+  static async getProductsByCategory(req, res) {
+    const { name } = req.params;
+
+    const { error, data } = await ProductService.getProductsByCategory(name);
+    if (error) return res.status(400).json({ data });
+    res.status(200).json({ data });
+  }
 }
 
 module.exports = ProductController;
