@@ -1,7 +1,8 @@
 const mysql = require("mysql");
 const db = require("./db/db");
 const app = require("express")();
-
+const cors =require('cors')
+app.use(cors())
 // Express Rutas
 const routes = require("./routes");
 app.use("/api", routes);
