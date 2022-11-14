@@ -10,4 +10,4 @@
 
 ### /api/products
 - /api/category => Lista de todas las categorias de la db.
-- /api/category => Lista de categorias por nombre.
+- /api/category/:name => Lista de categorias por nombre.
